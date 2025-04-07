@@ -164,6 +164,7 @@
 </head>
 <body>
 
+<!-- Hero + Formulario -->
 <div class="container">
   <div class="left">
     <div class="vip">VIP</div>
@@ -186,6 +187,7 @@
   </div>
 </div>
 
+<!-- Sección de Clases -->
 <section class="section-clases">
   <h2>¿Qué vas a aprender en Crypto Week?</h2>
   <div class="clases-grid">
@@ -195,6 +197,7 @@
   </div>
 </section>
 
+<!-- Paula Tello -->
 <section style="background-color: white; color: #000; padding: 60px 20px;">
   <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
     <div style="flex: 1 1 300px; text-align: center;">
@@ -212,6 +215,7 @@
   </div>
 </section>
 
+<!-- Segundo Formulario -->
 <section class="second-form">
   <h3>✅ Paso #1 ¡Regístrate para asegurar tu espacio!</h3>
   <p>Después de registrarte te llevaré a hablarme a WhatsApp</p>
@@ -226,57 +230,45 @@
   </div>
 </section>
 
-<!-- Sección de confirmación -->
-<section id="confirmacion" style="display:none; background-color: black; color: white; padding: 60px 20px; text-align: center;">
-  <h1 style="color:#ff4081; font-size:48px; margin-bottom:10px;">CryptoWeek</h1>
-  <h2 style="color:#cc00ff; font-size:32px; margin:10px 0;">✋ ¡Alto, aun te falta un paso! ✋</h2>
-  <p style="font-size:20px; max-width:700px; margin:20px auto; line-height:1.6;">
-    Únete al Grupo privado de WhatsApp para recibir el acceso a las clases de Crypto Week y otras sorpresas 🎁 que tengo para ti 😍
-  </p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:120px; margin:40px 0 20px;">
-  <br>
-  <a href="https://wa.me/573028618806" target="_blank"
-     style="background-color:#63ff00; color:black; font-weight:bold; font-size:20px; padding:15px 30px; border-radius:30px; text-decoration:none; display:inline-block; margin-bottom:10px;">
-     Unirme a la Comunidad de Whatsapp
-  </a>
-  <div style="font-size:14px; color:#ccc; margin-top:10px;">Serás redirigido automáticamente en...</div>
-  <div style="font-size:14px; color:#ddd; margin-top:60px; max-width:800px; margin-left:auto; margin-right:auto;">
-    Te enviamos un correo con toda la información del seminario, recuerda mirar tu papelera de correo no deseado. ¡Te enviamos una sorpresa 🎁!
-  </div>
-</section>
-
+<!-- Footer -->
 <footer style="background-color: white; color: #333; padding: 40px 20px; text-align: center;">
   <div style="max-width: 1000px; margin: auto;">
     <h1 style="font-size: 40px; font-weight: bold;"><span style="color: #ff4081;">Crypto</span><span style="color: #777;">Week</span> <span style="color: #555;">LUNES 05</span> <span style="color: #777;">DE MAYO</span></h1>
     <p style="font-size: 12px; margin-top: 20px; line-height: 1.8;">
-      Este sitio no forma parte ni está respaldado por Facebook ™. Facebook ™ es una marca comercial de Facebook ™, Inc...<br>
-      ...La capacitación inicial sin costo no te compromete a nada y podrás implementar lo que aprendas de inmediato por tu cuenta.
+      Este sitio no forma parte ni está respaldado por Facebook ™... Esta capacitación inicial sin costo no te compromete a nada.
     </p>
     <p style="font-size: 14px; margin-top: 30px;"><strong>COPYRIGHT © 2025 · Paula Tello</strong></p>
   </div>
 </footer>
 
+<!-- Script de envío a Google Sheets + redirección -->
 <script>
   const forms = document.querySelectorAll(".registro-form");
   forms.forEach(form => {
     form.addEventListener("submit", function(e) {
       e.preventDefault();
+
       const data = {
         nombre: form.nombre.value,
         correo: form.correo.value
       };
-      fetch("https://script.google.com/macros/s/AKfycbz0llLHSJE4V1sDcZ1sXsebCqWSWMQeo0TKlKJCkAoJVfTtRyeu-pvCtLyjMKfJSZeGog/exec", {
+
+      fetch("https://script.google.com/macros/s/AKfycbxEB7sAuivicwc9iSR4qvXfP0sCuTBODZgA2-yAOXM-/dev", {
         method: "POST",
         body: JSON.stringify(data)
-      }).then(response => {
-        if (response.ok) {
-          document.body.innerHTML = document.getElementById("confirmacion").outerHTML;
-          setTimeout(() => {
-            window.location.href = "https://wa.me/573028618806";
-          }, 7000);
+      })
+      .then(response => response.text())
+      .then(result => {
+        if (result === "OK") {
+          const mensaje = encodeURIComponent("Hola, ya me registré para CryptoWeek 💥");
+          window.location.href = `https://wa.me/573028618806?text=${mensaje}`;
         } else {
-          alert("Hubo un error al enviar tus datos.");
+          alert("Hubo un problema al registrar tu información.");
         }
+      })
+      .catch(error => {
+        alert("Error de red o de conexión.");
+        console.error(error);
       });
     });
   });
