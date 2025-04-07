@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -138,6 +139,19 @@
       font-size: 16px;
       color: white;
     }
+    .second-form {
+      background-color: #000;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .form-box {
+      max-width: 500px;
+      background-color: #111;
+      border: 4px solid #333;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
@@ -151,7 +165,6 @@
 </head>
 <body>
 
-<!-- Hero -->
 <div class="container">
   <div class="left">
     <div class="vip">VIP</div>
@@ -163,40 +176,26 @@
   <div class="right">
     <h3>✅ Paso #1 ¡Regístrate para asegurar tu espacio!</h3>
     <p>Después de registrarte te llevaré a hablarme a WhatsApp</p>
-    <form id="formulario">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required />
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" required />
+    <form class="registro-form">
+      <label for="nombre1">Nombre</label>
+      <input type="text" name="nombre" required />
+      <label for="correo1">Correo electrónico</label>
+      <input type="email" name="correo" required />
       <button type="submit">QUIERO ASISTIR AL EVENTO</button>
     </form>
     <div class="note">No te enviaré correos molestos y podrás retirarte cuando quieras</div>
   </div>
 </div>
 
-<!-- Clases -->
 <section class="section-clases">
   <h2>¿Qué vas a aprender en Crypto Week?</h2>
   <div class="clases-grid">
-    <div class="clase">
-      <img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/fa330367882600febe6229e2ce636e684d3ba73e0cf7f9a07bf87217e84bdbf0.jpg" />
-      <h3>Clase #1</h3>
-      <p>Conoce el mercado que más personas están utilizando para crecer sus inversiones en automático.</p>
-    </div>
-    <div class="clase">
-      <img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/61f1509b5b72622137c2f476bf81a5f6c68491c96fc4b4c74113e2499b7c574b.jpg" />
-      <h3>Clase #2</h3>
-      <p>Aprende a utilizar la herramienta que genera ganancias constantes y con bajo riesgo en el mercado crypto.</p>
-    </div>
-    <div class="clase">
-      <img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/ca00c74b0343e0d0076fccc624cf13021395903962e45febd73ac328962b94a8.jpg" />
-      <h3>Clase #3</h3>
-      <p>Pasa de “me preocupa el riesgo de perder mi dinero” a “genero ingresos constantes con staking de criptomonedas de forma segura y en solo 24 horas”.</p>
-    </div>
+    <div class="clase"><img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/fa330367882600febe6229e2ce636e684d3ba73e0cf7f9a07bf87217e84bdbf0.jpg"/><h3>Clase #1</h3><p>Conoce el mercado que más personas están utilizando para crecer sus inversiones en automático.</p></div>
+    <div class="clase"><img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/61f1509b5b72622137c2f476bf81a5f6c68491c96fc4b4c74113e2499b7c574b.jpg"/><h3>Clase #2</h3><p>Aprende a utilizar la herramienta que genera ganancias constantes y con bajo riesgo en el mercado crypto.</p></div>
+    <div class="clase"><img src="https://global-files-nginx.builderall.com/2f5d54c9-76a6-42f7-9f98-2d35babb385c/ca00c74b0343e0d0076fccc624cf13021395903962e45febd73ac328962b94a8.jpg"/><h3>Clase #3</h3><p>Pasa de “me preocupa el riesgo de perder mi dinero” a “genero ingresos constantes con staking de criptomonedas de forma segura y en solo 24 horas”.</p></div>
   </div>
 </section>
 
-<!-- Paula Tello -->
 <section style="background-color: white; color: #000; padding: 60px 20px;">
   <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
     <div style="flex: 1 1 300px; text-align: center;">
@@ -205,72 +204,61 @@
     <div style="flex: 1 1 500px;">
       <h2 style="color: #a000d6; font-size: 36px; margin-bottom: 20px; text-align: center;">PAULA TELLO</h2>
       <p style="font-size: 18px; line-height: 1.6; text-align: center;">
-        Hola, soy María Paula Tello y soy como tú<br><br>
-        En los últimos 2 años, he ayudado a más de 1000 estudiantes a aprender a invertir y diversificar 
-        correctamente su capital en el mercado de las criptomonedas.<br><br>
-        Actualmente tengo historias de éxito que superan las 6 cifras al año. ¿Cómo lo logramos? 
-        Tenemos tres estrategias específicas y quiero enseñarlo a otras personas para que también puedan lograrlo.<br><br>
-        Si estás leyendo esto es porque deseas crear más ingresos apalancándote del mercado de las criptomonedas 
-        y yo te prometo que durante esta semana de entrenamiento gratuito te enseñaré cómo yo lo hago.<br><br>
+        Hola, soy María Paula Tello y soy como tú<br><br>En los últimos 2 años, he ayudado a más de 1000 estudiantes a aprender a invertir y diversificar correctamente su capital en el mercado de las criptomonedas.<br><br>
+        Actualmente tengo historias de éxito que superan las 6 cifras al año. ¿Cómo lo logramos? Tenemos tres estrategias específicas y quiero enseñarlo a otras personas para que también puedan lograrlo.<br><br>
+        Si estás leyendo esto es porque deseas crear más ingresos apalancándote del mercado de las criptomonedas y yo te prometo que durante esta semana de entrenamiento gratuito te enseñaré cómo yo lo hago.<br><br>
         <strong>Regístrate a Crypto Week y empieza a aumentar tus ingresos.</strong>
       </p>
     </div>
   </div>
 </section>
 
-<!-- Nuevo formulario centrado -->
-<section style="background-color: #000; padding: 60px 20px; text-align: center;">
-  <h3 style="color: #fff; font-size: 20px; margin-bottom: 20px;">
-    ✅ Paso #1 ¡Regístrate para asegurar tu espacio!<br>
-    Después de registrarte te llevaré a hablarme a <strong>WhatsApp</strong>
-  </h3>
-  <div style="display: inline-block; background: #111; padding: 30px; border-radius: 10px; border: 5px solid #333;">
-    <form id="formulario2">
-      <label for="nombre2" style="color:white; display:block; text-align:left;">Nombre</label>
-      <input type="text" id="nombre2" name="nombre" required
-        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border-radius: 6px; border: none;" />
-      
-      <label for="correo2" style="color:white; display:block; text-align:left;">Correo electrónico</label>
-      <input type="email" id="correo2" name="correo" required
-        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border-radius: 6px; border: none;" />
-      
-      <button type="submit"
-        style="background-color: #e60023; color: white; font-weight: bold; padding: 15px; font-size: 18px; width: 100%; border-radius: 6px; border: none; cursor: pointer; box-shadow: 0 8px 16px rgba(255,0,0,0.3);">
-        QUIERO ASISTIR AL EVENTO
-      </button>
+<section class="second-form">
+  <h3>✅ Paso #1 ¡Regístrate para asegurar tu espacio!</h3>
+  <p>Después de registrarte te llevaré a hablarme a WhatsApp</p>
+  <div class="form-box">
+    <form class="registro-form">
+      <label>Nombre</label>
+      <input type="text" name="nombre" required />
+      <label>Correo electrónico</label>
+      <input type="email" name="correo" required />
+      <button type="submit">QUIERO ASISTIR AL EVENTO</button>
     </form>
   </div>
 </section>
 
-<!-- Script -->
+<footer style="background-color: white; color: #333; padding: 40px 20px; text-align: center;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h1 style="font-size: 40px; font-weight: bold;"><span style="color: #ff4081;">Crypto</span><span style="color: #777;">Week</span> <span style="color: #555;">LUNES 05</span> <span style="color: #777;">DE MAYO</span></h1>
+    <p style="font-size: 12px; margin-top: 20px; line-height: 1.8;">
+      Este sitio no forma parte ni está respaldado por Facebook ™. Facebook ™ es una marca comercial de Facebook ™, Inc...<br>
+      ...La capacitación inicial sin costo no te compromete a nada y podrás implementar lo que aprendas de inmediato por tu cuenta.
+    </p>
+    <p style="font-size: 14px; margin-top: 30px;"><strong>COPYRIGHT © 2025 · Paula Tello</strong></p>
+  </div>
+</footer>
+
 <script>
-  document.getElementById('formulario').addEventListener('submit', function (e) {
-    e.preventDefault();
-    enviarFormulario(e.target);
-  });
-
-  document.getElementById('formulario2').addEventListener('submit', function (e) {
-    e.preventDefault();
-    enviarFormulario(e.target);
-  });
-
-  function enviarFormulario(formulario) {
-    const data = {
-      nombre: formulario.nombre.value,
-      correo: formulario.correo.value
-    };
-    fetch('https://script.google.com/macros/s/AKfycbz0llLHSJE4V1sDcZ1sXsebCqWSWMQeo0TKlKJCkAoJVfTtRyeu-pvCtLyjMKfJSZeGog/exec', {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-    .then(response => {
-      if (response.ok) {
-        window.location.href = "https://wa.me/573001112233?text=¡Gracias por registrarte al evento!";
-      } else {
-        alert("Error al enviar los datos.");
-      }
+  const forms = document.querySelectorAll(".registro-form");
+  forms.forEach(form => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = {
+        nombre: form.nombre.value,
+        correo: form.correo.value
+      };
+      fetch("https://script.google.com/macros/s/AKfycbz0llLHSJE4V1sDcZ1sXsebCqWSWMQeo0TKlKJCkAoJVfTtRyeu-pvCtLyjMKfJSZeGog/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = "https://wa.me/573028618806?text=¡Gracias por registrarte al evento!";
+        } else {
+          alert("Hubo un error al enviar tus datos.");
+        }
+      });
     });
-  }
+  });
 </script>
 
 </body>
