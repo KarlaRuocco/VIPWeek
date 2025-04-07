@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -227,6 +226,25 @@
   </div>
 </section>
 
+<!-- Sección de confirmación -->
+<section id="confirmacion" style="display:none; background-color: black; color: white; padding: 60px 20px; text-align: center;">
+  <h1 style="color:#ff4081; font-size:48px; margin-bottom:10px;">CryptoWeek</h1>
+  <h2 style="color:#cc00ff; font-size:32px; margin:10px 0;">✋ ¡Alto, aun te falta un paso! ✋</h2>
+  <p style="font-size:20px; max-width:700px; margin:20px auto; line-height:1.6;">
+    Únete al Grupo privado de WhatsApp para recibir el acceso a las clases de Crypto Week y otras sorpresas 🎁 que tengo para ti 😍
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:120px; margin:40px 0 20px;">
+  <br>
+  <a href="https://wa.me/573028618806" target="_blank"
+     style="background-color:#63ff00; color:black; font-weight:bold; font-size:20px; padding:15px 30px; border-radius:30px; text-decoration:none; display:inline-block; margin-bottom:10px;">
+     Unirme a la Comunidad de Whatsapp
+  </a>
+  <div style="font-size:14px; color:#ccc; margin-top:10px;">Serás redirigido automáticamente en...</div>
+  <div style="font-size:14px; color:#ddd; margin-top:60px; max-width:800px; margin-left:auto; margin-right:auto;">
+    Te enviamos un correo con toda la información del seminario, recuerda mirar tu papelera de correo no deseado. ¡Te enviamos una sorpresa 🎁!
+  </div>
+</section>
+
 <footer style="background-color: white; color: #333; padding: 40px 20px; text-align: center;">
   <div style="max-width: 1000px; margin: auto;">
     <h1 style="font-size: 40px; font-weight: bold;"><span style="color: #ff4081;">Crypto</span><span style="color: #777;">Week</span> <span style="color: #555;">LUNES 05</span> <span style="color: #777;">DE MAYO</span></h1>
@@ -252,7 +270,10 @@
         body: JSON.stringify(data)
       }).then(response => {
         if (response.ok) {
-          window.location.href = "https://wa.me/573028618806?text=¡Gracias por registrarte al evento!";
+          document.body.innerHTML = document.getElementById("confirmacion").outerHTML;
+          setTimeout(() => {
+            window.location.href = "https://wa.me/573028618806";
+          }, 7000);
         } else {
           alert("Hubo un error al enviar tus datos.");
         }
